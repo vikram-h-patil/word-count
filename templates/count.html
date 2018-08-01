@@ -1,0 +1,24 @@
+<h1> Displaying the count </h1>
+
+<a href="{%url 'home'%}">Start Again </a>
+
+<h2>You have entered below text</h2>
+<br/>
+{{ vikramtext }}
+<br/>
+------------------------------
+<br/>
+
+<h2> Total count of words are: </h2> {{ count_of_words }}
+<br/>
+------------------------------
+<br/>
+
+<h2> Individual Word Count:</h2>
+
+<!–– creating a for loop to fetch indic word count ––>
+
+{% for word,wcount in sorted_words %}
+{{word}} : {{wcount}}
+<br/>
+{% endfor %}
